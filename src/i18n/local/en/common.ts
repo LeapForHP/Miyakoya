@@ -1,0 +1,84 @@
+export const common = {
+  nav: {
+    top: 'Top',
+    profile: 'Profile',
+    contact: 'Contact',
+    onlineShop: 'Online Shop',
+    onlineStore: 'Online store',
+    wechat: 'WeChat'
+  },
+  hero: {
+   
+    title2: 'HOKKAIDO',
+    title3: 'Dried Sea Cucumber',
+    subtitle: 'Dried Sea Cucumber',
+    factoryTitle: 'Otaru Factory'
+  },
+  intro: {
+    heading1: '~Premium Quality Sea Cucumber from Otaru, Hokkaido~',
+    heading2: 'Carefully processing nature\'s bounty with Japanese craftsmanship to deliver to tables around the world',
+    title1: 'From the Seas of Hokkaido',
+    title2: '–Premium Quality Dried Sea Cucumber',
+    subtitle1: 'Carefully dried using Japanese craftsmanship to deliver nature\'s',
+    subtitle2: 'bounty to tables around the world.',
+    desc1: 'Sea cucumbers grown in the cold seas of Hokkaido are highly nutritious and have long been valued for their benefits in vitality and beauty.',
+    desc2: 'Among them, we offer only the finest grade natural "Kinko", carefully processed and dried at our own facility to ensure the highest quality.',
+    desc3: 'Sea cucumbers grown in the cold seas',
+    desc4: 'of Hokkaido are highly nutritious',
+    desc5: 'and have long been valued',
+    desc6: 'for their benefits in vitality and beauty',
+    desc7: 'Among the sea cucumbers we handle,',
+    desc8: 'we offer only the finest grade natural【Kinko】',
+    desc9: 'Carefully processed and dried',
+    desc10: 'at our own facility to ensure quality'
+  },
+  shop: {
+    title: 'Online Shop',
+    comingSoon: 'Coming soon..',
+    button: 'Move'
+  },
+  faq: {
+    title: 'FAQ',
+    subtitle: 'Frequently Asked Questions',
+    q1: 'Q Where in Hokkaido are the sea cucumbers caught?',
+    a1: 'A We source from throughout Hokkaido year-round, so the origin varies depending on the season.',
+    q2: 'Q Do you offer international shipping?',
+    a2: 'A Yes, we do. The price varies depending on the shipping method, so please contact us for details.',
+    q3: 'Q Why are Hokkaido sea cucumbers expensive?',
+    a3: 'A Hokkaido sea cucumbers are more nutritious compared to those from other regions. They are also called【Black Diamond】because of their large and beautiful spines.',
+    q4: 'Q Do you have certificates of origin and radiation inspection?',
+    a4: 'A Yes, we do, but as they are customs documents, we only provide them to business customers.'
+  },
+  preparation: {
+    title: 'How to Rehydrate Sea Cucumber',
+    step1Title: 'Step 1',
+    step1Desc1: 'Lightly wash the surface of the sea cucumber and soak for 24-36 hours.',
+    step1Desc2: 'Change the water once a day.',
+    step2Title: 'Step 2',
+    step2Desc: 'Once softened, insert a knife from the incision on the belly and thoroughly remove any remaining organs and sand.',
+    step3Title: 'Step 3',
+    step3Desc: 'Boil the cleaned sea cucumber until it reaches your desired softness. Boiling for about 1 hour will give a moderate texture.',
+    step4Title: 'Step 4',
+    step4Desc: 'Turn off the heat and let it cool naturally, then add ice and refrigerate for 48-72 hours.'
+  },
+  knowledge: {
+    title: 'Sea Cucumber Facts💡',
+    heading1: 'Sea cucumbers are said to be good for vitality.',
+    heading2: 'What exactly makes them good for the body?',
+    desc1: 'Hokkaido【Black Sea Cucumber】is mainly composed of',
+    desc2: 'collagen',
+    desc3: 'and is very rich in amino acids.',
+    desc4: 'It is said to help with blood formation, calcium absorption, sexual function and physical strength enhancement, as well as fatigue recovery, cold sensitivity improvement, dry skin care, and many other beneficial effects!',
+    desc5: 'Sea cucumber is also called the【Ginseng of the Sea】and has been',
+    desc6: 'valued since ancient times for its nutritional value and tonic effects.',
+    desc7: 'We have received many happy testimonials, such as pregnant women with anemia who saw dramatic improvements in their numbers after continuing to eat our sea cucumbers, and grandmothers with bad knees whose conditions improved!'
+  },
+  news: {
+    title: 'News',
+    date1: '2025/8/1',
+    content1: 'Website has been renewed.'
+  },
+  footer: {
+    copyright: 'Copyright 2025 Miyakoya'
+  }
+};
