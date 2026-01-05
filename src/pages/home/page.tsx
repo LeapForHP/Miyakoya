@@ -49,7 +49,7 @@ export default function Home() {
             {t('hero.title2')}<br />
             {t('hero.title3')}
           </h1>
-          <p className="text-3xl md:text-5xl font-bold mt-6">{t('')}</p>
+          <p className="text-3xl md:text-5xl font-bold mt-6">{t('hero.subtitle')}</p>
         </div>
       </section>
 
@@ -72,7 +72,10 @@ export default function Home() {
               </div>
             </div>
             <div>
-
+              <h2 className="text-2xl md:text-4xl font-bold mb-6">{t('intro.title1')}<br />{t('intro.title2')}</h2>
+              <p className="text-lg md:text-xl mb-4">{t('intro.subtitle1')}<br />{t('intro.subtitle2')}</p>
+              <p className="text-xl md:text-2xl font-bold mb-4">{t('intro.desc1')}</p>
+              <p className="text-xl md:text-2xl font-bold">{t('intro.desc2')}</p>
               <div className="mt-8">
                 <p className="text-lg md:text-xl leading-relaxed">
                   {t('intro.desc3')}<br />

@@ -8,7 +8,6 @@ export const common = {
     wechat: 'WeChat'
   },
   hero: {
-   
     title2: 'HOKKAIDO',
     title3: 'Dried Sea Cucumber',
     subtitle: 'Dried Sea Cucumber',
@@ -80,5 +79,59 @@ export const common = {
   },
   footer: {
     copyright: 'Copyright 2025 Miyakoya'
+  },
+  profile: {
+    title: 'Company Profile',
+    companyName: 'Company Name',
+    companyNameValue: 'Leaders Corporation',
+    established: 'Established',
+    establishedValue: 'April 1, 2015',
+    capital: 'Capital',
+    capitalValue: '5 million yen',
+    ceo: 'CEO',
+    ceoValue: 'Toshiyuki Takeda',
+    address: 'Head Office',
+    addressValue1: '〒335-0025',
+    addressValue2: '3-27 Minamicho, Toda City, Saitama Prefecture',
+    branch: 'Branch',
+    branchValue: 'Hokkaido Otaru Factory',
+    employees: 'Employees',
+    employeesValue: '10 employees (as of August 2025)',
+    business: 'Business',
+    businessValue: '●Procurement, processing, sales and overseas export of marine products',
+    banks: 'Partner Banks',
+    banksValue1: '●MUFG Bank Shibuya Branch',
+    banksValue2: '●Otaru Shinkin Bank',
+    history: 'Company History',
+    history1Title: '●April 2015',
+    history1Value: 'Established Leaders Corporation with capital of 5 million yen',
+    history2Title: '●2020',
+    history2Value: 'Increased capital to 20 million yen',
+    history3Title: '●2020',
+    history3Value: 'Started processing at Hokkaido Otaru Factory'
+  },
+  contact: {
+    title: 'Contact Us',
+    lastName: 'Last name',
+    firstName: 'First name',
+    companyName: 'Company Name',
+    post: 'Department/Position',
+    phone: 'Phone number',
+    email: 'Email address',
+    inquiry: 'Inquiry',
+    required: 'Required',
+    phonePlaceholder: '080-0000-0000',
+    emailPlaceholder: 'xxxx@example.com',
+    inquiryPlaceholder: 'Please enter your inquiry',
+    charCount: 'characters',
+    notRobot: 'I am not a robot',
+    submit: 'Submit',
+    submitting: 'Submitting...',
+    successMessage: 'Your inquiry has been submitted successfully. Thank you.',
+    errorMessage: 'Submission failed. Please try again.',
+    privacyNote: 'Please read and agree to the Terms of Use and Privacy Policy before submitting.',
+    robotAlert: 'Please confirm you are not a robot.',
+    requiredAlert: 'Please fill in all required fields.',
+    charLimitAlert: 'Please limit your inquiry to 500 characters or less.'
   }
 };
