@@ -1,4 +1,3 @@
-
 export const common = {
   nav: {
     top: 'Top',
@@ -12,13 +11,11 @@ export const common = {
     title1: '',
     title2: 'HOKKAIDO',
     title3: 'Dried Sea Cucumber',
-  
     factoryTitle: '小樽工場'
   },
   intro: {
     heading1: '~北海道 小樽から最高品質のなまこを~',
     heading2: '天然の恵みを日本の技術で丁寧に加工し世界の食卓へ',
-    
     desc3: '北海道の冷たい海で育つなまこは',
     desc4: '栄養価が非常に高く',
     desc5: '古くから滋養強壮や美容食材として',
@@ -76,5 +73,59 @@ export const common = {
   },
   footer: {
     copyright: 'Copyright 2025 Miyakoya'
+  },
+  profile: {
+    title: 'プロフィール',
+    companyName: '会社名',
+    companyNameValue: '株式会社リーダーズ',
+    established: '設立',
+    establishedValue: '2015年4月1日',
+    capital: '資本金',
+    capitalValue: '500万円',
+    ceo: '代表取締役',
+    ceoValue: '武田敏之',
+    address: '本社所在地',
+    addressValue1: '〒335-0025',
+    addressValue2: '埼玉県戸田市南町3−27',
+    branch: '拠点',
+    branchValue: '北海道 小樽工場',
+    employees: '従業員数',
+    employeesValue: '10名(2025年8月現在)',
+    business: '事業内容',
+    businessValue: '●水産物の仕入れ・加工販売・海外輸出',
+    banks: '取引銀行',
+    banksValue1: '●三菱UFJ銀行渋谷支店',
+    banksValue2: '●小樽信用金庫',
+    history: '会社沿革',
+    history1Title: '●2015年4月',
+    history1Value: '株式会社リーダーズを資本金500万円で設立',
+    history2Title: '●2020年',
+    history2Value: '資本金を2000万に増資',
+    history3Title: '●2020年',
+    history3Value: '北海道 小樽工場にて加工開始'
+  },
+  contact: {
+    title: 'お問い合わせ',
+    lastName: 'Last name/姓',
+    firstName: 'First name/名',
+    companyName: 'Company Name/会社名',
+    post: 'Post/部署・役職',
+    phone: 'Phone number/電話番号',
+    email: 'Mail/アドレス',
+    inquiry: 'Inquiry/お問い合わせ内容',
+    required: '必須',
+    phonePlaceholder: '080-0000-0000',
+    emailPlaceholder: 'xxxx@example.com',
+    inquiryPlaceholder: 'お問い合わせ内容',
+    charCount: '文字',
+    notRobot: '私はロボットではありません',
+    submit: '送信',
+    submitting: '送信中...',
+    successMessage: '送信が完了しました。ありがとうございます。',
+    errorMessage: '送信に失敗しました。もう一度お試しください。',
+    privacyNote: '利用規約・プライバシーポリシーをお読みの上、同意して送信して下さい。',
+    robotAlert: 'ロボットではないことを確認してください。',
+    requiredAlert: '必須項目を入力してください。',
+    charLimitAlert: 'お問い合わせ内容は500文字以内で入力してください。'
   }
 };

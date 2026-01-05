@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="px-6 py-8">
         <div className="max-w-7xl mx-auto">
           <nav className="flex flex-wrap justify-center gap-6 mb-6 text-sm">
-            <a href="#top" className="hover:underline cursor-pointer">
+            <a href="/" className="hover:underline cursor-pointer">
               {t('nav.top')}
             </a>
             <span className="text-white/50">|</span>
@@ -16,7 +16,7 @@ export default function Footer() {
               {t('nav.onlineStore')}
             </a>
             <span className="text-white/50">|</span>
-            <a href="https://32n4m.hp.peraichi.com" target="_blank" rel="noopener noreferrer" className="hover:underline cursor-pointer">
+            <a href="/contact" className="hover:underline cursor-pointer">
               {t('nav.contact')}
             </a>
             <span className="text-white/50">|</span>
@@ -26,9 +26,6 @@ export default function Footer() {
           </nav>
           <div className="text-center text-sm">
             <p>{t('footer.copyright')}</p>
-            <a href="https://readdy.ai/?origin=logo" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-white transition-colors mt-2 inline-block cursor-pointer">
-              Powered by Readdy
-            </a>
           </div>
         </div>
       </div>
