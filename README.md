@@ -4,7 +4,6 @@
 
 ## 🌐 公開URL
 - **本番サイト**: [www.leaders-co.jp](https://www.leaders-co.jp)
-- **GitHub Pages**: [GitHub Pages URL](https://leapforhp.github.io/Miyakoya/)
 
 ## 🛠 技術スタック
 
