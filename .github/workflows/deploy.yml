@@ -1,0 +1,57 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # mainブランチにプッシュされたときに実行
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build project
+        run: npm run build
+
+      - name: Deploy to docs folder
+        run: |
+          # docs フォルダをクリア（CNAME以外）
+          find docs -type f ! -name 'CNAME' -delete
+          find docs -type d ! -name 'docs' ! -name 'assets' -exec rm -rf {} + 2>/dev/null || true
+          
+          # dist の内容を docs にコピー
+          cp -r dist/* docs/
+          
+          # CNAME ファイルが存在することを確認
+          if [ ! -f docs/CNAME ]; then
+            echo "www.leaders-co.jp" > docs/CNAME
+          fi
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add docs/
+          if git diff --staged --quiet; then
+            echo "No changes to deploy"
+          else
+            git commit -m "Deploy to GitHub Pages"
+            git push
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
