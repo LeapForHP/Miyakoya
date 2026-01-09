@@ -49,7 +49,6 @@ export default function Home() {
             {t('hero.title2')}<br />
             {t('hero.title3')}
           </h1>
-          <p className="text-3xl md:text-5xl font-bold mt-6">{t('hero.subtitle')}</p>
         </div>
       </section>
 
