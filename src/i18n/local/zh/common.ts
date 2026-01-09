@@ -8,7 +8,7 @@ export const common = {
     wechat: '微信'
   },
   hero: {
-    title1: '北海道海参',
+    title1: '',
     title2: '北海道',
     title3: '干海参',
     subtitle: '干海参',

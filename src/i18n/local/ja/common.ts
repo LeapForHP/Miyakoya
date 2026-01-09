@@ -9,8 +9,8 @@ export const common = {
   },
   hero: {
     title1: '',
-    title2: 'HOKKAIDO',
-    title3: 'Dried Sea Cucumber',
+    title2: '北海道産',
+    title3: '乾燥なまこ',
     factoryTitle: '小樽工場'
   },
   intro: {
