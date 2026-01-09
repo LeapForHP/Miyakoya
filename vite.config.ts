@@ -68,7 +68,7 @@ export default defineConfig({
   base,
   build: {
     sourcemap: true,
-    outDir: "dist", // GitHub Actionsでdocsに移動するため、一旦distに出力
+    outDir: "docs", // 直接docsに出力
   },
   resolve: {
     alias: {
