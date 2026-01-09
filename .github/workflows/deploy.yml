@@ -37,6 +37,9 @@ jobs:
           # dist の内容を docs にコピー
           cp -r dist/* docs/
           
+          # 404.html を作成（SPA support）
+          cp docs/index.html docs/404.html
+          
           # CNAME ファイルが存在することを確認
           if [ ! -f docs/CNAME ]; then
             echo "www.leaders-co.jp" > docs/CNAME
