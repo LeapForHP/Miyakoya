@@ -134,5 +134,8 @@ export const common = {
     robotAlert: '请确认您不是机器人。',
     requiredAlert: '请填写必填项。',
     charLimitAlert: '咨询内容请在500字以内输入。'
+  },
+  wechat: {
+    mainTitle: '微信在这里'
   }
 };

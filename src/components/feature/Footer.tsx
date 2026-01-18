@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   const { t } = useTranslation('common');
@@ -20,9 +21,9 @@ export default function Footer() {
               {t('nav.contact')}
             </a>
             <span className="text-white/50">|</span>
-            <a href="https://0ef9f.hp.peraichi.com" target="_blank" rel="noopener noreferrer" className="hover:underline cursor-pointer">
+            <Link to="/wechat" className="hover:underline cursor-pointer">
               {t('nav.wechat')}
-            </a>
+            </Link>
           </nav>
           <div className="text-center text-sm">
             <p>{t('footer.copyright')}</p>

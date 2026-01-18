@@ -80,6 +80,9 @@ export const common = {
   footer: {
     copyright: 'Copyright 2025 Miyakoya'
   },
+  wechat: {
+    mainTitle: 'WeChatはこちら'
+  },
   profile: {
     title: 'プロフィール',
     companyName: '会社名',

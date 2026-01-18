@@ -3,6 +3,7 @@ import NotFound from "../pages/NotFound";
 import Home from "../pages/home/page";
 import Profile from "../pages/profile/page";
 import Contact from "../pages/contact/page";
+import WeChat from "../pages/wechat/page";
 
 const routes: RouteObject[] = [
   {
@@ -16,6 +17,10 @@ const routes: RouteObject[] = [
   {
     path: "/contact",
     element: <Contact />,
+  },
+  {
+    path: "/wechat",
+    element: <WeChat />,
   },
   {
     path: "*",

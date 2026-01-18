@@ -133,5 +133,8 @@ export const common = {
     robotAlert: 'Please confirm you are not a robot.',
     requiredAlert: 'Please fill in all required fields.',
     charLimitAlert: 'Please limit your inquiry to 500 characters or less.'
+  },
+  wechat: {
+    mainTitle: 'WeChat Here'
   }
 };
