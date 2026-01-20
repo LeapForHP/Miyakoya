@@ -2,16 +2,5 @@ name = "leaders-site"
 pages_build_output_dir = "docs"
 compatibility_date = "2023-05-18"
 compatibility_flags = ["nodejs_compat"]
-
-# Pages Functions設定
-[build]
-command = "npm run build"
-cwd = ""
-
-# 環境変数（ローカル開発用）
 [vars]
 NODE_ENV = "development"
-
-# 本番環境変数は Cloudflare Dashboard で設定
-# SENDGRID_API_KEY は secrets として設定
-# TO_EMAIL, TO_EMAIL_2 は environment variables として設定
