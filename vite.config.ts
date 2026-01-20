@@ -4,7 +4,7 @@ import { resolve } from "node:path";
 import AutoImport from "unplugin-auto-import/vite";
 
 const isPreview = process.env.IS_PREVIEW ? true : false;
-const base = "./";
+const base = "/";
 // https://vite.dev/config/
 export default defineConfig({
   define: {
