@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import emailjs from '@emailjs/browser';
 import Header from '../../components/feature/Header';
 import Footer from '../../components/feature/Footer';
 
@@ -46,39 +45,32 @@ export default function Contact() {
     setSubmitStatus('idle');
 
     try {
-      // EmailJS template parameters
-      const templateParams = {
-        lastName: formData.lastName,
-        firstName: formData.firstName,
-        companyName: formData.companyName || '未記入',
-        post: formData.post || '未記入',
-        phone: formData.phone,
-        email: formData.email,
-        inquiry: formData.inquiry,
-        to_name: '都や担当者様',
-        from_name: `${formData.lastName} ${formData.firstName}`,
-        subject: `お問い合わせ: ${formData.lastName} ${formData.firstName}様より`
-      };
-
-      // EmailJS send
-      await emailjs.send(
-        'YOUR_SERVICE_ID',  // EmailJSのサービスID
-        'YOUR_TEMPLATE_ID', // EmailJSのテンプレートID
-        templateParams,
-        'YOUR_PUBLIC_KEY'   // EmailJSの公開キー
-      );
-
-      setSubmitStatus('success');
-      setFormData({
-        lastName: '',
-        firstName: '',
-        companyName: '',
-        post: '',
-        phone: '',
-        email: '',
-        inquiry: ''
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
       });
-      setIsRobot(true);
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        setSubmitStatus('success');
+        setFormData({
+          lastName: '',
+          firstName: '',
+          companyName: '',
+          post: '',
+          phone: '',
+          email: '',
+          inquiry: ''
+        });
+        setIsRobot(true);
+      } else {
+        console.error('API Error:', result);
+        setSubmitStatus('error');
+      }
     } catch (error) {
       console.error('メール送信エラー:', error);
       setSubmitStatus('error');

@@ -5,7 +5,52 @@
 ## 🌐 公開URL
 - **本番サイト**: [www.leaders-co.jp](https://www.leaders-co.jp)
 
-## 🛠 技術スタック
+## � お問い合わせ機能設定
+
+### Cloudflare Pages + SendGrid構成
+
+**サーバーレス関数**: `functions/api/contact.js`
+- Cloudflare Page Functionsを使用
+- SendGrid APIでメール送信
+- 複数宛先対応
+
+### 必要な環境変数
+
+Cloudflare Pagesの管理画面で以下を設定：
+
+```bash
+SENDGRID_API_KEY=your_sendgrid_api_key    # SendGrid API キー（必須）
+TO_EMAIL=info@leaders-co.jp               # 送信先1（必須）
+TO_EMAIL_2=support@leaders-co.jp          # 送信先2（オプション）
+```
+
+### 設定手順
+
+1. **SendGridアカウント作成・API Key取得**
+   - [SendGrid](https://sendgrid.com) でアカウント作成
+   - API Keys → Create API Key
+   - Full Access権限でキーを作成
+
+2. **Cloudflare Pages環境変数設定**
+   - Cloudflare Dashboard → Pages → プロジェクト選択
+   - Settings → Environment variables
+   - 上記の環境変数を設定
+
+3. **デプロイ**
+   ```bash
+   npm run deploy
+   git add .
+   git commit -m "SendGrid連携機能実装"
+   git push
+   ```
+
+### トラブルシューティング
+
+- **メールが送信されない場合**: Cloudflare Dashboard のFunction logsを確認
+- **CORS エラー**: ドメインの設定を確認
+- **SendGrid エラー**: API Key の権限を確認
+
+## �🛠 技術スタック
 
 - **Frontend**: React 19 + TypeScript
 - **Build Tool**: Vite
@@ -56,11 +101,33 @@ cd leaders
 # 依存関係のインストール
 npm install
 
-# 開発サーバー起動
-npm run dev
+# 環境変数設定（ローカル開発用）
+cp .env.example .env.local
+# .env.local を編集して実際のSendGrid API keyを設定
 ```
 
-開発サーバーは [http://localhost:3000](http://localhost:3000) で起動します。
+### 開発サーバー
+
+#### フロントエンドのみ（UI確認用）
+```bash
+npm run dev
+```
+- [http://localhost:3000](http://localhost:3000) で起動
+- お問い合わせ機能は動作しません
+
+#### 完全なローカルテスト（推奨）
+```bash
+npm run dev:full
+```
+- フロントエンド + Cloudflare Page Functions
+- お問い合わせ機能も含めて完全テスト可能
+- SendGrid API key が必要
+
+#### Functions のみテスト
+```bash
+npm run dev:functions
+```
+- ビルド済みファイルでFunctionsをテスト
 
 ## 📝 開発手順
 
