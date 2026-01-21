@@ -34,6 +34,7 @@ export async function onRequestPost(context) {
     const TO_EMAIL = env.TO_EMAIL || 'info@leaders-co.jp'; // デフォルト送信先
     const TO_EMAIL_2 = env.TO_EMAIL_2; // 2つ目の送信先（オプション）
     const TO_EMAIL_3 = env.TO_EMAIL_3; // 3つ目の送信先（オプション）
+    const TO_EMAIL_4 = env.TO_EMAIL_4; // 4つ目の送信先（オプション）
     
     if (!SENDGRID_API_KEY) {
       console.error('SendGrid API key not configured');
@@ -53,6 +54,9 @@ export async function onRequestPost(context) {
     }
     if (TO_EMAIL_3) {
       recipients.push({ email: TO_EMAIL_3 });
+    }
+    if (TO_EMAIL_4) {
+      recipients.push({ email: TO_EMAIL_4 });
     }
 
     // Email content
