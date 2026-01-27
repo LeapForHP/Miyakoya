@@ -14,10 +14,8 @@ export const common = {
     factoryTitle: 'Otaru Factory'
   },
   intro: {
-    heading1: '~Premium Quality Sea Cucumber from Otaru, Hokkaido~',
-    heading2: 'Carefully processing nature\'s bounty with Japanese craftsmanship to deliver to tables around the world',
-    title1: 'From the Seas of Hokkaido',
-    title2: '–Premium Quality Dried Sea Cucumber',
+    title1: '~Premium Quality Sea Cucumber from Otaru, Hokkaido~',
+    title2: 'Carefully processing nature\'s bounty with Japanese craftsmanship to deliver to tables around the world',
     desc3: 'Sea cucumbers grown in the cold seas',
     desc4: 'of Hokkaido are highly nutritious',
     desc5: 'and have long been valued',
@@ -57,7 +55,7 @@ export const common = {
     step4Desc: 'Turn off the heat and let it cool naturally, then add ice and refrigerate for 48-72 hours.'
   },
   knowledge: {
-    title: 'Sea Cucumber Facts💡',
+    title: 'Sea Cucumber Facts',
     heading1: 'Sea cucumbers are said to be good for vitality.',
     heading2: 'What exactly makes them good for the body?',
     desc1: 'Hokkaido【Black Sea Cucumber】is mainly composed of',

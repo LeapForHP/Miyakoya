@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Header from '../../components/feature/Header';
 import Footer from '../../components/feature/Footer';
 
@@ -8,6 +8,32 @@ export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const isJapanese = i18n.language === 'ja';
   const isChinese = i18n.language === 'zh';
+
+  // Scroll animation setup
+  const observerRef = useRef<IntersectionObserver | null>(null);
+
+  useEffect(() => {
+    observerRef.current = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-fade-in');
+            entry.target.classList.remove('opacity-0');
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+
+    const elements = document.querySelectorAll('.scroll-animate');
+    elements.forEach((el) => observerRef.current?.observe(el));
+
+    return () => {
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
+    };
+  }, []);
 
   const slides = [
     'https://cdn.peraichi.com/userData/2f4495ec-fa1a-46a1-b089-229ea1319976/img/263f4ed0-4ff5-013e-36c8-0a58a9feac02/PK-PAUI9805_TP_V4.jpg',
@@ -39,7 +65,7 @@ export default function Home() {
       <Header />
 
       {/* Hero Section */}
-      <section id="top" className="relative min-h-[400px] flex items-center justify-center text-white py-16" style={{
+      <section id="top" className="relative min-h-[300px] md:min-h-[400px] flex items-center justify-center text-white py-12 md:py-16" style={{
         backgroundImage: 'url(https://cdn.peraichi.com/userData/2f4495ec-fa1a-46a1-b089-229ea1319976/img/681cf5a0-7cb0-013e-d257-0a58a9feac02/IMG_2882.JPG)',
         backgroundSize: 'cover',
         backgroundPosition: 'center'
@@ -54,33 +80,36 @@ export default function Home() {
       </section>
 
       {/* Factory Section */}
-      <section className="relative min-h-[700px] flex items-center text-white" style={{
+      <section className="relative min-h-[700px] flex items-center justify-center text-white" style={{
         backgroundImage: 'url(https://cdn.peraichi.com/template_files/library/landscape_jpg/-mNvCsNlsSE/original.jpg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}>
         <div className="absolute inset-0 bg-black/50"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-16">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="flex justify-center">
-              <div className="w-80 h-80 rounded-full overflow-hidden">
-                <img 
-                  src="https://cdn.peraichi.com/userData/2f4495ec-fa1a-46a1-b089-229ea1319976/img/8354b090-4f39-013e-c299-0a58a9feac02/IMG_6535_Original.jpg" 
-                  alt="Factory" 
-                  className="w-full h-full object-cover"
-                />
+        <div className="relative z-10 w-full mx-auto px-6 md:px-12 py-16">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-2xl md:text-4xl font-bold mb-12 text-center leading-relaxed scroll-animate">
+              {t('intro.title1')}<br />
+              {t('intro.title2')}
+            </h2>
+            <div className="flex flex-col md:flex-row gap-12 items-center justify-center">
+              <div className="flex-shrink-0 scroll-animate">
+                <div className="w-64 h-64 rounded-full overflow-hidden">
+                  <img
+                    src="/images/factory.jpg"
+                    alt="Factory"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
-            </div>
-            <div>
-              <h2 className="text-2xl md:text-4xl font-bold mb-6">{t('intro.title1')}<br />{t('intro.title2')}</h2>
-              <div className="mt-8">
+              <div className="flex-1 min-w-0 max-w-xl scroll-animate">
                 <p className="text-lg md:text-xl leading-relaxed">
                   {t('intro.desc3')}<br />
-                  {t('intro.desc4')}<br />
+                  {t('intro.desc4')}<br /><br />
                   {t('intro.desc5')}<br />
-                  {t('intro.desc6')}<br />
+                  {t('intro.desc6')}<br /><br />
                   {t('intro.desc7')}<br />
-                  {t('intro.desc8')}<br />
+                  {t('intro.desc8')}<br /><br />
                   {t('intro.desc9')}<br />
                   {t('intro.desc10')}
                 </p>
@@ -131,23 +160,23 @@ export default function Home() {
         backgroundPosition: 'center'
       }}>
         <div className="absolute inset-0 bg-black/50"></div>
-        <div className="relative z-10 text-center px-6">
+        <div className="relative z-10 text-center px-6 scroll-animate">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">{t('shop.title')}</h2>
           <p className="text-2xl mb-8">{t('shop.comingSoon')}</p>
-          <a href="https://9trn5.hp.peraichi.com" target="_blank" rel="noopener noreferrer" className="inline-block bg-white text-[#003561] px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition-colors cursor-pointer whitespace-nowrap">
+          {/* <a href="https://9trn5.hp.peraichi.com" target="_blank" rel="noopener noreferrer" className="inline-block bg-white text-[#003561] px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition-colors cursor-pointer whitespace-nowrap">
             {t('shop.button')}
-          </a>
+          </a> */}
         </div>
       </section>
 
       {/* FAQ Section */}
       <section className="py-16 px-6 bg-[#003d5c]">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-white mb-4">{t('faq.title')}</h2>
-          <p className="text-center text-white mb-12">{t('faq.subtitle')}</p>
+          <h2 className="text-4xl font-bold text-center text-white mb-4 scroll-animate">{t('faq.title')}</h2>
+          <p className="text-center text-white mb-12 scroll-animate">{t('faq.subtitle')}</p>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[1, 2, 3, 4].map((num) => (
-              <div key={num} className="flex flex-col items-center">
+              <div key={num} className="flex flex-col items-center scroll-animate">
                 <div className="bg-[#3d9fe8] rounded-2xl p-6 mb-4 relative">
                   <div className="absolute -bottom-2 right-8 flex gap-1">
                     <div className="w-3 h-3 bg-[#3d9fe8] rounded-full"></div>
@@ -177,10 +206,10 @@ export default function Home() {
       {/* Preparation Section */}
       <section className="py-16 px-6 bg-[#003561]">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-white mb-12">{t('preparation.title')}</h2>
+          <h2 className="text-4xl font-bold text-center text-white mb-12 scroll-animate">{t('preparation.title')}</h2>
           <div className="space-y-8">
             {[1, 2, 3, 4].map((num) => (
-              <div key={num} className="flex gap-6 items-start bg-white/5 p-6 rounded-lg">
+              <div key={num} className="flex gap-6 items-start bg-white/5 p-6 rounded-lg scroll-animate">
                 <div className="flex-shrink-0 w-20 h-20">
                   <img 
                     src={num === 1 ? 'https://cdn.peraichi.com/userData/2f4495ec-fa1a-46a1-b089-229ea1319976/img/718ddf50-50cf-013e-7f00-0a58a9feac02/adobe_express_image.png' :
@@ -218,9 +247,9 @@ export default function Home() {
       }}>
         <div className="absolute inset-0 bg-white/80"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-16">
-          <h2 className="text-4xl font-bold text-center mb-12">{t('knowledge.title')}</h2>
+          <h2 className="text-4xl font-bold text-center mb-12 scroll-animate">{t('knowledge.title')}</h2>
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="flex justify-center">
+            <div className="flex justify-center scroll-animate">
               <div className="w-80 h-60 rounded-full overflow-hidden">
                 <img
                   src="/images/sea-cucumber-knowledge.png"
@@ -229,7 +258,7 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div>
+            <div className="scroll-animate">
               <h3 className="text-2xl font-bold mb-4">
                 {t('knowledge.heading1')}<br />
                 {t('knowledge.heading2')}
@@ -257,8 +286,8 @@ export default function Home() {
       {/* News Section */}
       <section className="py-16 px-6 bg-[#003561]">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-white mb-12">{t('news.title')}</h2>
-          <div className="bg-white/5 rounded-lg overflow-hidden">
+          <h2 className="text-4xl font-bold text-center text-white mb-12 scroll-animate">{t('news.title')}</h2>
+          <div className="bg-white/5 rounded-lg overflow-hidden scroll-animate">
             <div className="border-b border-white/10 p-6 flex gap-6">
               <div className="font-bold text-white whitespace-nowrap">{t('news.date1')}</div>
               <div className="text-white">{t('news.content1')}</div>

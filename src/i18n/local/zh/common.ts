@@ -15,10 +15,8 @@ export const common = {
     factoryTitle: '小樽工厂'
   },
   intro: {
-    heading1: '~来自北海道小樽的最高品质海参~',
-    heading2: '用日本工艺精心加工天然恩惠，送往世界各地的餐桌',
-    title1: '来自北海道海域',
-    title2: '–优质干海参',
+    title1: '〜来自北海道小樽的最高品质海参〜',
+    title2: '用日本工艺精心加工天然恩惠，送往世界各地的餐桌',
     desc3: '生长在北海道寒冷海域的海参',
     desc4: '营养价值极高',
     desc5: '自古以来就作为滋补强身',
@@ -58,7 +56,7 @@ export const common = {
     step4Desc: '关火后自然冷却，加入冰块在冰箱中冷藏48~72小时。'
   },
   knowledge: {
-    title: '海参小知识💡',
+    title: '海参小知识',
     heading1: '据说海参对滋补强身有益。',
     heading2: '到底对身体有什么好处呢？',
     desc1: '北海道产【黑海参】的主要成分',
