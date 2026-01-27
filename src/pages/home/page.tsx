@@ -4,8 +4,10 @@ import Header from '../../components/feature/Header';
 import Footer from '../../components/feature/Footer';
 
 export default function Home() {
-  const { t } = useTranslation('common');
+  const { t, i18n } = useTranslation('common');
   const [currentSlide, setCurrentSlide] = useState(0);
+  const isJapanese = i18n.language === 'ja';
+  const isChinese = i18n.language === 'zh';
 
   const slides = [
     'https://cdn.peraichi.com/userData/2f4495ec-fa1a-46a1-b089-229ea1319976/img/263f4ed0-4ff5-013e-36c8-0a58a9feac02/PK-PAUI9805_TP_V4.jpg',
@@ -33,7 +35,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-[#003561]">
+    <div className={`min-h-screen bg-[#003561] ${isJapanese ? 'font-mincho' : isChinese ? 'font-songti' : ''}`}>
       <Header />
 
       {/* Hero Section */}
@@ -72,9 +74,6 @@ export default function Home() {
             </div>
             <div>
               <h2 className="text-2xl md:text-4xl font-bold mb-6">{t('intro.title1')}<br />{t('intro.title2')}</h2>
-              <p className="text-lg md:text-xl mb-4">{t('intro.subtitle1')}<br />{t('intro.subtitle2')}</p>
-              <p className="text-xl md:text-2xl font-bold mb-4">{t('intro.desc1')}</p>
-              <p className="text-xl md:text-2xl font-bold">{t('intro.desc2')}</p>
               <div className="mt-8">
                 <p className="text-lg md:text-xl leading-relaxed">
                   {t('intro.desc3')}<br />
@@ -227,9 +226,9 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="flex justify-center">
               <div className="w-80 h-60 rounded-full overflow-hidden">
-                <img 
-                  src="https://cdn.peraichi.com/userData/2f4495ec-fa1a-46a1-b089-229ea1319976/img/5d259430-50c7-013e-a4c3-0a58a9feac02/file.png" 
-                  alt="Sea Cucumber" 
+                <img
+                  src="/images/sea-cucumber-knowledge.png"
+                  alt="Sea Cucumber"
                   className="w-full h-full object-cover"
                 />
               </div>

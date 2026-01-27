@@ -2,10 +2,12 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
-  const { t } = useTranslation('common');
+  const { t, i18n } = useTranslation('common');
+  const isJapanese = i18n.language === 'ja';
+  const isChinese = i18n.language === 'zh';
 
   return (
-    <footer className="bg-[#003561] text-white">
+    <footer className={`bg-[#003561] text-white ${isJapanese ? 'font-mincho' : isChinese ? 'font-songti' : ''}`}>
       <div className="px-6 py-8">
         <div className="max-w-7xl mx-auto">
           <nav className="flex flex-wrap justify-center gap-6 mb-6 text-sm">

@@ -6,6 +6,8 @@ export default function Header() {
   const { t, i18n } = useTranslation('common');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLangOpen, setIsLangOpen] = useState(false);
+  const isJapanese = i18n.language === 'ja';
+  const isChinese = i18n.language === 'zh';
 
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
@@ -21,7 +23,7 @@ export default function Header() {
   const currentLang = languages.find(lang => lang.code === i18n.language) || languages[0];
 
   return (
-    <header className="bg-[#003561] text-white sticky top-0 z-50">
+    <header className={`bg-[#003561] text-white sticky top-0 z-50 ${isJapanese ? 'font-mincho' : isChinese ? 'font-songti' : ''}`}>
       <div className="px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">

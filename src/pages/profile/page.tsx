@@ -3,10 +3,12 @@ import Header from '../../components/feature/Header';
 import Footer from '../../components/feature/Footer';
 
 export default function Profile() {
-  const { t } = useTranslation('common');
+  const { t, i18n } = useTranslation('common');
+  const isJapanese = i18n.language === 'ja';
+  const isChinese = i18n.language === 'zh';
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className={`min-h-screen flex flex-col ${isJapanese ? 'font-mincho' : isChinese ? 'font-songti' : ''}`}>
       <Header />
       
       <main className="flex-1">
