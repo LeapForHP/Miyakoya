@@ -39,7 +39,7 @@ export default function Home() {
       <Header />
 
       {/* Hero Section */}
-      <section id="top" className="relative min-h-[600px] flex items-center justify-center text-white" style={{
+      <section id="top" className="relative min-h-[400px] flex items-center justify-center text-white py-16" style={{
         backgroundImage: 'url(https://cdn.peraichi.com/userData/2f4495ec-fa1a-46a1-b089-229ea1319976/img/681cf5a0-7cb0-013e-d257-0a58a9feac02/IMG_2882.JPG)',
         backgroundSize: 'cover',
         backgroundPosition: 'center'
@@ -47,7 +47,6 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="relative z-10 text-center px-6">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            {t('hero.title1')}<br />
             {t('hero.title2')}<br />
             {t('hero.title3')}
           </h1>
@@ -87,9 +86,6 @@ export default function Home() {
                 </p>
               </div>
             </div>
-          </div>
-          <div className="text-center mt-12">
-            <h3 className="text-3xl font-bold">{t('hero.factoryTitle')}</h3>
           </div>
         </div>
       </section>
@@ -145,30 +141,30 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 px-6 bg-[#003561]">
+      <section className="py-16 px-6 bg-[#003d5c]">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-center text-white mb-4">{t('faq.title')}</h2>
           <p className="text-center text-white mb-12">{t('faq.subtitle')}</p>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[1, 2, 3, 4].map((num) => (
               <div key={num} className="flex flex-col items-center">
-                <div className="bg-white rounded-2xl p-6 mb-4 relative">
+                <div className="bg-[#3d9fe8] rounded-2xl p-6 mb-4 relative">
                   <div className="absolute -bottom-2 right-8 flex gap-1">
-                    <div className="w-3 h-3 bg-white rounded-full"></div>
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                    <div className="w-3 h-3 bg-[#3d9fe8] rounded-full"></div>
+                    <div className="w-2 h-2 bg-[#3d9fe8] rounded-full"></div>
                   </div>
-                  <p className="text-gray-800 text-lg leading-relaxed whitespace-pre-line">
-                    {t(`faq.q${num}`)}<br /><br />
-                    {t(`faq.a${num}`)}
+                  <p className="text-white text-base leading-relaxed whitespace-pre-line">
+                    <span className="font-bold text-lg">Q</span> {t(`faq.q${num}`)}<br /><br />
+                    <span className="font-bold text-lg text-red-400">A</span> {t(`faq.a${num}`)}
                   </p>
                 </div>
-                <div className="w-24 h-24 rounded-full overflow-hidden">
-                  <img 
-                    src={num === 1 ? 'https://cdn.peraichi.com/template_files/library/landscape_jpg/4M-5WBrG5-c/original.jpg' : 
+                <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-white">
+                  <img
+                    src={num === 1 ? 'https://cdn.peraichi.com/template_files/library/landscape_jpg/4M-5WBrG5-c/original.jpg' :
                          num === 2 ? 'https://cdn.peraichi.com/userData/2f4495ec-fa1a-46a1-b089-229ea1319976/img/13b6c860-4f81-013e-0014-0a58a9feac02/paku1220par568010583_TP_V4 (1).jpg' :
                          num === 3 ? 'https://cdn.peraichi.com/userData/2f4495ec-fa1a-46a1-b089-229ea1319976/img/5dbe4490-4f36-013e-396e-0a58a9feac02/file.jpg' :
-                         'https://cdn.peraichi.com/template_files/library/pakutaso/pakutaso_072/original.jpg'} 
-                    alt={`FAQ ${num}`} 
+                         'https://cdn.peraichi.com/template_files/library/pakutaso/pakutaso_072/original.jpg'}
+                    alt={`FAQ ${num}`}
                     className="w-full h-full object-cover"
                   />
                 </div>

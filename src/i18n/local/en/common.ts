@@ -35,14 +35,14 @@ export const common = {
   faq: {
     title: 'FAQ',
     subtitle: 'Frequently Asked Questions',
-    q1: 'Q Where in Hokkaido are the sea cucumbers caught?',
-    a1: 'A We source from throughout Hokkaido year-round, so the origin varies depending on the season.',
-    q2: 'Q Do you offer international shipping?',
-    a2: 'A Yes, we do. The price varies depending on the shipping method, so please contact us for details.',
-    q3: 'Q Why are Hokkaido sea cucumbers expensive?',
-    a3: 'A Hokkaido sea cucumbers are more nutritious compared to those from other regions. They are also called【Black Diamond】because of their large and beautiful spines.',
-    q4: 'Q Do you have certificates of origin and radiation inspection?',
-    a4: 'A Yes, we do, but as they are customs documents, we only provide them to business customers.'
+    q1: 'Where in Hokkaido are the sea cucumbers caught?',
+    a1: 'We source from throughout Hokkaido year-round, so the origin varies depending on the season.',
+    q2: 'Do you offer international shipping?',
+    a2: 'Yes, we do. The price varies depending on the shipping method, so please contact us for details.',
+    q3: 'Why are Hokkaido sea cucumbers expensive?',
+    a3: 'Hokkaido sea cucumbers are more nutritious compared to those from other regions. They are also called【Black Diamond】because of their large and beautiful spines.',
+    q4: 'Do you have certificates of origin and radiation inspection?',
+    a4: 'Yes, we do, but as they are customs documents, we only provide them to business customers.'
   },
   preparation: {
     title: 'How to Rehydrate Sea Cucumber',
