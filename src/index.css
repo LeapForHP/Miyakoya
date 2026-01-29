@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 日本語明朝体フォントの明示的定義 */
+.font-mincho {
+  font-family: "Noto Serif JP", "游明朝", "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "HGS明朝E", "MS PMincho", serif !important;
+}
+
+.font-mincho *:not([class*="ri-"]):not(i) {
+  font-family: "Noto Serif JP", "游明朝", "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "HGS明朝E", "MS PMincho", serif !important;
+}
+
+/* 中国語宋体フォントの明示的定義 */
+.font-songti {
+  font-family: "Noto Serif SC", "Songti SC", "STSong", "SimSun", serif !important;
+}
+
+.font-songti *:not([class*="ri-"]):not(i) {
+  font-family: "Noto Serif SC", "Songti SC", "STSong", "SimSun", serif !important;
+}
+
+/* Scroll animations */
+.scroll-animate {
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

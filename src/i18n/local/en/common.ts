@@ -1,0 +1,134 @@
+export const common = {
+  nav: {
+    top: 'Top',
+    profile: 'Profile',
+    contact: 'Contact',
+    onlineShop: 'Online Shop',
+    onlineStore: 'Online store',
+    wechat: 'WeChat'
+  },
+  hero: {
+    title2: 'HOKKAIDO',
+    title3: 'Dried Sea Cucumber',
+    subtitle: 'Dried Sea Cucumber',
+    factoryTitle: 'Otaru Factory'
+  },
+  intro: {
+    title1: '~Premium Quality Sea Cucumber from Otaru, Hokkaido~',
+    title2: 'Carefully processing nature\'s bounty with Japanese craftsmanship to deliver to tables around the world',
+    desc3: 'Sea cucumbers grown in the cold seas',
+    desc4: 'of Hokkaido are highly nutritious',
+    desc5: 'and have long been valued',
+    desc6: 'for their benefits in vitality and beauty',
+    desc7: 'Among the sea cucumbers we handle,',
+    desc8: 'we offer only the finest grade natural【Kinko】',
+    desc9: 'Carefully processed and dried',
+    desc10: 'at our own facility to ensure quality'
+  },
+  shop: {
+    title: 'Online Shop',
+    comingSoon: 'Coming soon..',
+    button: 'Move'
+  },
+  faq: {
+    title: 'FAQ',
+    subtitle: 'Frequently Asked Questions',
+    q1: 'Where in Hokkaido are the sea cucumbers caught?',
+    a1: 'We source from throughout Hokkaido year-round, so the origin varies depending on the season.',
+    q2: 'Do you offer international shipping?',
+    a2: 'Yes, we do. The price varies depending on the shipping method, so please contact us for details.',
+    q3: 'Why are Hokkaido sea cucumbers expensive?',
+    a3: 'Hokkaido sea cucumbers are more nutritious compared to those from other regions. They are also called【Black Diamond】because of their large and beautiful spines.',
+    q4: 'Do you have certificates of origin and radiation inspection?',
+    a4: 'Yes, we do, but as they are customs documents, we only provide them to business customers.'
+  },
+  preparation: {
+    title: 'How to Rehydrate Sea Cucumber',
+    step1Title: 'Step 1',
+    step1Desc1: 'Lightly wash the surface of the sea cucumber and soak for 24-36 hours.',
+    step1Desc2: 'Change the water once a day.',
+    step2Title: 'Step 2',
+    step2Desc: 'Once softened, insert a knife from the incision on the belly and thoroughly remove any remaining organs and sand.',
+    step3Title: 'Step 3',
+    step3Desc: 'Boil the cleaned sea cucumber until it reaches your desired softness. Boiling for about 1 hour will give a moderate texture.',
+    step4Title: 'Step 4',
+    step4Desc: 'Turn off the heat and let it cool naturally, then add ice and refrigerate for 48-72 hours.'
+  },
+  knowledge: {
+    title: 'Sea Cucumber Facts',
+    heading1: 'Sea cucumbers are said to be good for vitality.',
+    heading2: 'What exactly makes them good for the body?',
+    desc1: 'Hokkaido【Black Sea Cucumber】is mainly composed of',
+    desc2: 'collagen',
+    desc3: 'and is very rich in amino acids.',
+    desc4: 'It is said to help with blood formation, calcium absorption, sexual function and physical strength enhancement, as well as fatigue recovery, cold sensitivity improvement, dry skin care, and many other beneficial effects!',
+    desc5: 'Sea cucumber is also called the【Ginseng of the Sea】and has been',
+    desc6: 'valued since ancient times for its nutritional value and tonic effects.',
+    desc7: 'We have received many happy testimonials, such as pregnant women with anemia who saw dramatic improvements in their numbers after continuing to eat our sea cucumbers, and grandmothers with bad knees whose conditions improved!'
+  },
+  news: {
+    title: 'News',
+    date1: '2025/8/1',
+    content1: 'Website has been renewed.'
+  },
+  footer: {
+    copyright: 'Copyright 2025 Miyakoya'
+  },
+  profile: {
+    title: 'Company Profile',
+    companyName: 'Company Name',
+    companyNameValue: 'Leaders Corporation',
+    established: 'Established',
+    establishedValue: 'April 1, 2015',
+    capital: 'Capital',
+    capitalValue: '5 million yen',
+    ceo: 'CEO',
+    ceoValue: 'Toshiyuki Takeda',
+    address: 'Head Office',
+    addressValue1: '〒335-0025',
+    addressValue2: '3-27 Minamicho, Toda City, Saitama Prefecture',
+    branch: 'Branch',
+    branchValue: 'Hokkaido Otaru Factory',
+    employees: 'Employees',
+    employeesValue: '10 employees (as of August 2025)',
+    business: 'Business',
+    businessValue: '●Procurement, processing, sales and overseas export of marine products',
+    banks: 'Partner Banks',
+    banksValue1: '●MUFG Bank Shibuya Branch',
+    banksValue2: '●Otaru Shinkin Bank',
+    history: 'Company History',
+    history1Title: '●April 2015',
+    history1Value: 'Established Leaders Corporation with capital of 5 million yen',
+    history2Title: '●2020',
+    history2Value: 'Increased capital to 20 million yen',
+    history3Title: '●2020',
+    history3Value: 'Started processing at Hokkaido Otaru Factory'
+  },
+  contact: {
+    title: 'Contact Us',
+    lastName: 'Last name',
+    firstName: 'First name',
+    companyName: 'Company Name',
+    post: 'Department/Position',
+    phone: 'Phone number',
+    email: 'Email address',
+    inquiry: 'Inquiry',
+    required: 'Required',
+    phonePlaceholder: '080-0000-0000',
+    emailPlaceholder: 'xxxx@example.com',
+    inquiryPlaceholder: 'Please enter your inquiry',
+    charCount: 'characters',
+    notRobot: 'I am not a robot',
+    submit: 'Submit',
+    submitting: 'Submitting...',
+    successMessage: 'Your inquiry has been submitted successfully. Thank you.',
+    errorMessage: 'Submission failed. Please try again.',
+    privacyNote: 'Please read and agree to the Terms of Use and Privacy Policy before submitting.',
+    robotAlert: 'Please confirm you are not a robot.',
+    requiredAlert: 'Please fill in all required fields.',
+    charLimitAlert: 'Please limit your inquiry to 500 characters or less.'
+  },
+  wechat: {
+    mainTitle: 'WeChat Here'
+  }
+};
