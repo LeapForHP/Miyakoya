@@ -78,7 +78,7 @@ export const common = {
   profile: {
     title: '公司简介',
     companyName: '公司名称',
-    companyNameValue: 'Leaders株式会社',
+    companyNameValue: 'Miyakoya',
     established: '成立时间',
     establishedValue: '2015年4月1日',
     capital: '注册资本',
