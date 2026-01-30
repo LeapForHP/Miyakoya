@@ -80,7 +80,7 @@ export const common = {
   profile: {
     title: 'プロフィール',
     companyName: '会社名',
-    companyNameValue: '株式会社リーダーズ',
+    companyNameValue: '都や',
     established: '設立',
     establishedValue: '2015年4月1日',
     capital: '資本金',
