@@ -77,7 +77,7 @@ export const common = {
   profile: {
     title: 'Company Profile',
     companyName: 'Company Name',
-    companyNameValue: 'Miyakoya',
+    companyNameValue: 'Miyakoya Corporation',
     established: 'Established',
     establishedValue: 'April 1, 2015',
     capital: 'Capital',
